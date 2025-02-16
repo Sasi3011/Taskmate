@@ -5,7 +5,8 @@ export const AddTask = ({ tasklist, setTasklist, task, setTask }) => {
     if (task.id) {
       const date = new Date();
       const updatedTaskList = tasklist.map((task) => (
-        task.id === task.id ? { id:task.id, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : task));
+        task.id === task.id ? { id: task.id, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : task
+      ));
       setTasklist(updatedTaskList);
       setTask({});
     } else {
@@ -32,7 +33,7 @@ export const AddTask = ({ tasklist, setTasklist, task, setTask }) => {
           maxLength="25"
           onChange={(e) => setTask({ ...task, name: e.target.value })}
         />
-        <button type="submit">{task.id ? "Update" :  "Add"}</button>
+        <button type="submit">{task.id ? "Update" : "Add"}</button>
       </form>
     </section>
   );
