@@ -6,10 +6,8 @@ export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
   }
 
   const handleEdit = (id) => {
-    console.log("Edit", id);
     const selectedTask = tasklist.find(task => task.id === id);
     setTask(selectedTask);
-    
   }
   return (
     <section className='showTask'>

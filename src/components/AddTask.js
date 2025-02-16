@@ -2,22 +2,23 @@ export const AddTask = ({ tasklist, setTasklist, task, setTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const date = new Date();
     if (task.id) {
-      const updateTask = tasklist.map((todo) => (
-        todo.id === task.id ? { ...task, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : todo
+      const date = new Date();
+      const updatedTaskList = tasklist.map((task) => (
+        task.id === task.id ? { id:task.id, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : task
       ));
-      setTasklist(updateTask);
+      setTasklist(updatedTaskList);
+      setTask({});
     } else {
+      const date = new Date();
       const newTask = {
         id: date.getTime(),
         name: e.target.task.value,
         time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}`
       };
       setTasklist([...tasklist, newTask]);
+      setTask({});
     }
-    setTask({});
-    e.target.task.value = "";
   };
 
   return (
