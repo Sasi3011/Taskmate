@@ -18,26 +18,6 @@ export const ShowTask = () => {
             <i class="bi bi-trash"></i>
           </li>
         </ul>
-        <ul>
-          <li>
-            <p>
-              <span className="name">Task B</span>
-              <span className="time">2:09:01 AM 9/14/2030</span>
-            </p>
-            <i class="bi bi-pencil-square"></i>
-            <i class="bi bi-trash"></i>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <p>
-              <span className="name">Task C</span>
-              <span className="time">2:09:01 AM 9/14/2030</span>
-            </p>
-            <i class="bi bi-pencil-square"></i>
-            <i class="bi bi-trash"></i>
-          </li>
-        </ul>
     </section>
   )
 }
