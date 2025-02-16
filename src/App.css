@@ -36,3 +36,18 @@
     cursor: pointer;
     color: #525252;
   }
+
+header .themeSelector span{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid #dfdfdf;
+  }
+
+header .themeSelector .activeTheme{
+    height: 30px;
+    width: 30px;
+  }
