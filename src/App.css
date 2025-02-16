@@ -76,7 +76,7 @@ header .themeSelector .activeTheme{
 }
   
 .addTask form button{
-    background-color: #03ba5c;
+    background-color: #0f6af3;
     color: #FFFFFF;
     border: none;
     padding: 5px 20px;
@@ -86,7 +86,7 @@ header .themeSelector .activeTheme{
 }
   
 .addTask form button:hover{
-    background-color: #03b056;
+    background-color: #1061db;
 }
   
 .showTask{
@@ -154,7 +154,7 @@ header .themeSelector .activeTheme{
     width: 350px;
     box-shadow: var(--box-shadow);
     border-radius: 5px;
-    border-left: 5px solid #1365dfaf;
+    border-left: 5px solid #1061db;
 }
   
 .showTask li:hover{
@@ -179,7 +179,7 @@ header .themeSelector .activeTheme{
   
 .showTask i.bi-pencil-square{
     font-size: 18px;
-    color: #1363DF;
+    color: #1061db;
     cursor: pointer;
 }
   
