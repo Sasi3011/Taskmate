@@ -5,24 +5,25 @@ import { ShowTask } from './components/ShowTask';
 import './App.css';
 
 function App() {
-  const [tasklist , setTasklist]=useState([]);
-  const [task, setTask]=useState({});
+  const [tasklist, setTasklist] = useState([]);
+  const [task, setTask] = useState({});
   return (
     <div className="App">
-        <Header />
-        <AddTask 
-        tasklist={tasklist} 
+      <Header />
+      <AddTask
+        tasklist={tasklist}
         setTasklist={setTasklist}
         task={task}
         setTask={setTask}
-        />
-        <ShowTask 
-        tasklist={tasklist} 
+      />
+      <ShowTask
+        tasklist={tasklist}
         setTasklist={setTasklist}
         task={task}
-        setTask={setTask} 
-        />
+        setTask={setTask}
+      />
     </div>
-    );
+  );
 }
-export default App;  
+
+export default App;

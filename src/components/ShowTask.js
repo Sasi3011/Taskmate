@@ -1,4 +1,4 @@
-export const ShowTask = ({tasklist, setTasklist, task, setTask}) => {
+export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
 
   const handleDelete = (id) => {
     const updatedTaskList = tasklist.filter(task => task.id !== id);
@@ -6,7 +6,9 @@ export const ShowTask = ({tasklist, setTasklist, task, setTask}) => {
   }
 
   const handleEdit = (id) => {
-    
+    const selectedTask = tasklist.find(task => task.id === id);
+    setTask(selectedTask);
+    handleEdit(id);
   }
 
   return (
@@ -24,7 +26,7 @@ export const ShowTask = ({tasklist, setTasklist, task, setTask}) => {
             <p>
               <span className="name">{task.name}</span>
               <span className="time">{task.time}</span>
-            </p>                
+            </p>
             <i onClick={() => handleEdit(task.id)} className="bi bi-pencil-square"></i>
             <i onClick={() => handleDelete(task.id)} className="bi bi-trash"></i>
           </li>
