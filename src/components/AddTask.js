@@ -1,15 +1,14 @@
 export const AddTask = ({ tasklist, setTasklist, task, setTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    const date=new Date();
     if (task.id) {
-      const date = new Date();
-      const updatedTaskList = tasklist.map((task) => (
-        task.id === task.id ? { id: task.id, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : task
-      ));
+      const updatedTaskList = tasklist.map((t) =>
+        t.id === task.id ? { ...t, name: task.name, time: `${date.toLocaleTimeString()}:${date.toLocaleDateString()}` } : t
+      );
       setTasklist(updatedTaskList);
-      setTask({});
-    } else {
+      
+    }else {
       const date = new Date();
       const newTask = {
         id: date.getTime(),
